@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>🌐 PC Master Universe: Guía Definitiva</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        
+        :root {
+            --bg-primary: #0F172A;
+            --bg-secondary: #1E293B;
+            --accent-blue: #3B82F6;
+            --accent-purple: #8B5CF6;
+            --text-primary: #E2E8F0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+
+        .super-card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(45, 60, 85, 0.5);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .super-card:hover {
+            transform: scale(1.03) translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+        }
+
+        .neon-border {
+            border: 2px solid transparent;
+            border-image: linear-gradient(45deg, var(--accent-blue), var(--accent-purple));
+            border-image-slice: 1;
+        }
+
+        .glowing-text {
+            text-shadow: 
+                0 0 7px var(--accent-blue),
+                0 0 10px var(--accent-blue),
+                0 0 21px var(--accent-blue),
+                0 0 42px var(--accent-purple),
+                0 0 82px var(--accent-purple);
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto px-8 py-12">
+        <header class="text-center py-16 bg-gradient-to-r from-blue-900 via-purple-900 to-black rounded-3xl shadow-2xl">
+            <h1 class="text-6xl font-extrabold mb-4 glowing-text tracking-tight">PC Master Universe</h1>
+            <p class="text-3xl font-thin opacity-80">Descubre · Aprende · Construye</p>
+        </header>
+
+        <nav class="my-16 grid grid-cols-1 md:grid-cols-4 gap-6">
+            <a href="#componentes" class="super-card p-6 text-center rounded-2xl hover:bg-blue-900 transition-all">
+                <span class="text-2xl font-semibold">🔧 Componentes</span>
+            </a>
+            <a href="#montaje" class="super-card p-6 text-center rounded-2xl hover:bg-purple-900 transition-all">
+                <span class="text-2xl font-semibold">🛠️ Montaje</span>
+            </a>
+            <a href="#compatibilidad" class="super-card p-6 text-center rounded-2xl hover:bg-green-900 transition-all">
+                <span class="text-2xl font-semibold">🔗 Compatibilidad</span>
+            </a>
+            <a href="#quiz" class="super-card p-6 text-center rounded-2xl hover:bg-red-900 transition-all">
+                <span class="text-2xl font-semibold">🎮 Quiz PC</span>
+            </a>
+        </nav>
+
+        <section id="componentes" class="space-y-16">
+            <h2 class="text-5xl font-bold text-center mb-16 text-blue-300">Anatomía Completa de un PC</h2>
+            
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- CPU Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-blue-300">Procesador (CPU)</h3>
+                    <p class="text-lg text-gray-300">Cerebro del sistema. Marcas: Intel (Core), AMD (Ryzen). Características: núcleos, frecuencia, arquitectura.</p>
+                </div>
+
+                <!-- Motherboard Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-purple-300">Placa Base</h3>
+                    <p class="text-lg text-gray-300">Plataforma central que conecta todos los componentes. Tipos: ATX, Micro-ATX, Mini-ITX.</p>
+                </div>
+
+                <!-- RAM Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-green-300">Memoria RAM</h3>
+                    <p class="text-lg text-gray-300">Memoria temporal de alta velocidad. Tipos: DDR4, DDR5. Capacidades: 4-128GB.</p>
+                </div>
+
+                <!-- GPU Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-red-300">Tarjeta Gráfica</h3>
+                    <p class="text-lg text-gray-300">Procesa gráficos. Marcas: NVIDIA (GeForce), AMD (Radeon). Memoria: 4-24GB VRAM.</p>
+                </div>
+
+                <!-- Power Supply Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-yellow-300">Fuente de Alimentación</h3>
+                    <p class="text-lg text-gray-300">Suministra energía. Certificaciones: 80 Plus Bronze/Gold/Platinum. Potencia: 450-1600W.</p>
+                </div>
+
+                <!-- Storage Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-indigo-300">Almacenamiento</h3>
+                    <p class="text-lg text-gray-300">SSD (SATA/NVMe), HDD. Capacidades: 256GB-4TB. Velocidades: hasta 7000 MB/s.</p>
+                </div>
+
+                <!-- Cooling Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-cyan-300">Sistema de Refrigeración</h3>
+                    <p class="text-lg text-gray-300">Aire o líquido. Marcas: Noctua, Corsair. Mantiene temperaturas óptimas.</p>
+                </div>
+
+                <!-- Case Card -->
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-4 text-pink-300">Gabinete</h3>
+                    <p class="text-lg text-gray-300">Chasis que aloja componentes. Tamaños: ATX, Micro-ATX. Flujo de aire optimizado.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="montaje" class="my-16">
+            <h2 class="text-5xl font-bold text-center mb-16 text-blue-300">Guía de Montaje Definitiva</h2>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-6 text-green-300">🛠️ Pasos de Montaje</h3>
+                    <ol class="space-y-4 text-lg text-gray-300">
+                        <li>1. Preparar espacio de trabajo antiestático</li>
+                        <li>2. Instalar CPU con pasta térmica</li>
+                        <li>3. Montar disipador de calor</li>
+                        <li>4. Colocar módulos de RAM</li>
+                        <li>5. Instalar placa base en gabinete</li>
+                        <li>6. Conectar fuente de alimentación</li>
+                        <li>7. Instalar almacenamiento</li>
+                        <li>8. Conectar tarjeta gráfica</li>
+                    </ol>
+                </div>
+                <div class="super-card p-8 rounded-3xl neon-border">
+                    <h3 class="text-3xl font-bold mb-6 text-purple-300">🧰 Herramientas Necesarias</h3>
+                    <ul class="space-y-4 text-lg text-gray-300">
+                        <li>• Destornillador Phillips</li>
+                        <li>• Pulsera antiestática</li>
+                        <li>• Pasta térmica de alta calidad</li>
+                        <li>• Superficie no conductiva</li>
+                        <li>• Pinzas de punta fina</li>
+                        <li>• Lámpara o linterna</li>
+                        <li>• Kit de limpieza</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="compatibilidad" class="my-16">
+            <h2 class="text-5xl font-bold text-center mb-16 text-blue-300">Verificador de Compatibilidad</h2>
+            
+            <div class="super-card p-12 rounded-3xl neon-border">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="text-2xl mb-4 block text-purple-300">Selecciona Procesador</label>
+                        <select id="cpuSelect" class="w-full p-4 bg-gray-800 text-white rounded-xl"></select>
+                    </div>
+                    <div>
+                        <label class="text-2xl mb-4 block text-purple-300">Selecciona Placa Base</label>
+                        <select id="motherboardSelect" class="w-full p-4 bg-gray-800 text-white rounded-xl"></select>
+                    </div>
+                </div>
+                <div id="compatibilityResult" class="mt-8 text-center text-2xl"></div>
+            </div>
+        </section>
+
+        <section id="quiz" class="my-16">
+            <h2 class="text-5xl font-bold text-center mb-16 text-blue-300">Quiz de Componentes PC</h2>
+            
+            <div class="super-card p-12 rounded-3xl neon-border">
+                <div id="quizContainer">
+                    <div id="questionArea" class="text-center"></div>
+                    <div id="scoreArea" class="mt-8 text-center"></div>
+                    <button id="startQuizBtn" class="mx-auto block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-2xl mt-8">
+                        Iniciar Quiz
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Compatibility data
+const compatibilityData = {
+    'Intel Core i5 12600K': ['MSI B660M-A PRO', 'Gigabyte Z690 UD'],
+    'AMD Ryzen 5 5600X': ['ASUS Prime B550M-A', 'ASRock B550M Pro4'],
+    'Intel Core i7 13700K': ['Gigabyte Z690 UD'],
+    'AMD Ryzen 7 5800X': ['ASUS Prime B550M-A', 'ASRock B550M Pro4']
+};
+
+// Quiz questions
+const allQuizQuestions = [
+{
+                question: "¿Qué función principal tiene la CPU?",
+                options: [
+                    "Almacenar archivos",
+                    "Ejecutar cálculos e instrucciones",
+                    "Mostrar imágenes",
+                    "Conectar componentes"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es la memoria RAM?",
+                options: [
+                    "Almacenamiento permanente",
+                    "Memoria temporal de alta velocidad",
+                    "Procesador gráfico",
+                    "Fuente de alimentación"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué función principal tiene la CPU?",
+                options: [
+                    "Almacenar archivos",
+                    "Ejecutar cálculos e instrucciones",
+                    "Mostrar imágenes",
+                    "Conectar componentes"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es la memoria RAM?",
+                options: [
+                    "Almacenamiento permanente",
+                    "Memoria temporal de alta velocidad",
+                    "Procesador gráfico",
+                    "Fuente de alimentación"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué hace una tarjeta gráfica?",
+                options: [
+                    "Procesa gráficos y renderiza imágenes",
+                    "Almacena archivos",
+                    "Controla la temperatura",
+                    "Genera sonido"
+                ],
+                correct: 0
+            },
+            {
+                question: "¿Cuál es la función de la fuente de alimentación?",
+                options: [
+                    "Enfriar los componentes",
+                    "Suministrar energía a los componentes",
+                    "Procesar instrucciones",
+                    "Almacenar datos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un SSD?",
+                options: [
+                    "Sistema de sonido",
+                    "Tarjeta de red",
+                    "Unidad de almacenamiento de estado sólido",
+                    "Procesador gráfico"
+                ],
+                correct: 2
+            },
+            {
+                question: "¿Qué hace el sistema de refrigeración?",
+                options: [
+                    "Genera electricidad",
+                    "Mantiene bajas las temperaturas de los componentes",
+                    "Almacena datos",
+                    "Procesa gráficos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es la placa base?",
+                options: [
+                    "Un componente para juegos",
+                    "Un sistema de enfriamiento",
+                    "La plataforma central que conecta componentes",
+                    "Un tipo de procesador"
+                ],
+                correct: 2
+            },
+            {
+                question: "¿Qué significa DDR en memorias RAM?",
+                options: [
+                    "Disco Duro Rápido",
+                    "Doble Data Rate",
+                    "Dispositivo de Datos Reducidos",
+                    "Datos Digitales Rápidos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un gabinete?",
+                options: [
+                    "Un procesador",
+                    "Un sistema de refrigeración",
+                    "El chasis que contiene los componentes",
+                    "Una tarjeta gráfica"
+                ],
+                correct: 2
+            },
+            {
+                question: "¿Qué hace la certificación 80 Plus en fuentes?",
+                options: [
+                    "Garantiza alta eficiencia energética",
+                    "Mejora el rendimiento del procesador",
+                    "Aumenta la velocidad de la RAM",
+                    "Reduce el tamaño de la fuente"
+                ],
+                correct: 0
+            },
+            {
+                question: "¿Qué es NVMe?",
+                options: [
+                    "Un tipo de tarjeta gráfica",
+                    "Un protocolo de almacenamiento SSD",
+                    "Un sistema de refrigeración",
+                    "Un tipo de procesador"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué significa VRAM?",
+                options: [
+                    "Velocidad de la RAM",
+                    "Video Random Access Memory",
+                    "Voltaje de RAM",
+                    "Volumen de RAM"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un socket de CPU?",
+                options: [
+                    "Un tipo de cable",
+                    "Un conector para instalar el procesador",
+                    "Un sistema de refrigeración",
+                    "Un tipo de memoria"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué hace PCIe?",
+                options: [
+                    "Procesa gráficos",
+                    "Conecta componentes como GPU y SSD",
+                    "Enfría los componentes",
+                    "Almacena datos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es la latencia en RAM?",
+                options: [
+                    "El tiempo de respuesta de la memoria",
+                    "El voltaje de la memoria",
+                    "El tamaño de la memoria",
+                    "La velocidad de la memoria"
+                ],
+                correct: 0
+            },
+            {
+                question: "¿Qué significa overclock?",
+                options: [
+                    "Reducir la velocidad del procesador",
+                    "Aumentar la velocidad de un componente por encima de su frecuencia base",
+                    "Enfriar un componente",
+                    "Conectar múltiples dispositivos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un chipset en placas base?",
+                options: [
+                    "Un sistema de refrigeración",
+                    "Un tipo de procesador",
+                    "Controla la comunicación entre componentes",
+                    "Un tipo de memoria"
+                ],
+                correct: 2
+            },
+            {
+                question: "¿Qué hace la tecnología Hyper-Threading?",
+                options: [
+                    "Mejora la refrigeración",
+                    "Permite que un núcleo físico actúe como dos núcleos lógicos",
+                    "Aumenta el almacenamiento",
+                    "Mejora los gráficos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un disipador de calor?",
+                options: [
+                    "Un sistema para disipar el calor de los componentes",
+                    "Un tipo de procesador",
+                    "Un sistema de almacenamiento",
+                    "Un tipo de memoria"
+                ],
+                correct: 0
+            },
+            {
+                question: "¿Qué significa RAID en almacenamiento?",
+                options: [
+                    "Red de Almacenamiento Independiente",
+                    "Redundant Array of Independent Disks",
+                    "Reducción Automática de Información de Discos",
+                    "Red Avanzada de Información de Discos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un factor de forma en motherboards?",
+                options: [
+                    "La velocidad de la placa base",
+                    "El tamaño físico de la placa base",
+                    "El número de puertos",
+                    "La capacidad de almacenamiento"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué hace un sistema de refrigeración líquida?",
+                options: [
+                    "Genera electricidad",
+                    "Usa líquido para disipar calor más eficientemente",
+                    "Almacena datos",
+                    "Procesa gráficos"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un bus en computadoras?",
+                options: [
+                    "Un sistema de transporte de datos entre componentes",
+                    "Un tipo de procesador",
+                    "Un sistema de refrigeración",
+                    "Un tipo de memoria"
+                ],
+                correct: 0
+            },
+            {
+                question: "¿Qué significa TDP en procesadores?",
+                options: [
+                    "Tiempo de Procesamiento Dinámico",
+                    "Thermal Design Power (Potencia de Diseño Térmico)",
+                    "Tasa de Procesamiento de Datos",
+                    "Transferencia Dinámica de Potencia"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un adaptador WiFi?",
+                options: [
+                    "Un sistema de refrigeración",
+                    "Un tipo de memoria",
+                    "Un dispositivo para conectividad inalámbrica",
+                    "Un tipo de procesador"
+                ],
+                correct: 2
+            },
+            {
+                question: "¿Qué hace un controlador de almacenamiento?",
+                options: [
+                    "Procesa gráficos",
+                    "Gestiona la comunicación con dispositivos de almacenamiento",
+                    "Enfría los componentes",
+                    "Genera sonido"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un PCB en motherboards?",
+                options: [
+                    "Placa de Circuito Base",
+                    "Procesador de Comunicación Binaria",
+                    "Protocolo de Conexión Básica",
+                    "Plataforma de Computación Binaria"
+                ],
+                correct: 0
+            },
+            {
+                question: "¿Qué significa M.2 en almacenamiento?",
+                options: [
+                    "Memoria de 2 núcleos",
+                    "Un formato de SSD compacto",
+                    "Módulo de 2 GB",
+                    "Memoria de 2 generación"
+                ],
+                correct: 1
+            },
+            {
+                question: "¿Qué es un firewall?",
+                options: [
+                    "Un sistema de refrigeración",
+                    "Un dispositivo de seguridad de red",
+                    "Un tipo de procesador",
+                    "Un sistema de almacenamiento"
+                ],
+                correct: 1
+            }
+        ];
+        
+
+let currentQuizQuestions = [];
+let currentQuestion = 0;
+let score = 0;
+
+function getRandomQuestions(questions, number) {
+    let shuffled = [...questions].sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, number);
+}
+
+function startQuiz() {
+    currentQuizQuestions = getRandomQuestions(allQuizQuestions, 10);
+    currentQuestion = 0;
+    score = 0;
+    displayQuestion();
+}
+
+function displayQuestion() {
+    const questionArea = document.getElementById('questionArea');
+    if (currentQuestion >= currentQuizQuestions.length) {
+        showResults();
+        return;
+    }
+    
+    const quiz = currentQuizQuestions[currentQuestion];
+    questionArea.innerHTML = `
+        <h3 class="text-3xl mb-8 text-blue-300">${quiz.question}</h3>
+        <div class="space-y-4">
+            ${quiz.options.map((opt, index) => `
+                <button onclick="checkAnswer(${index})" 
+                        class="w-full p-4 bg-gray-800 text-white rounded-xl hover:bg-blue-900 transition-all">
+                    ${opt}
+                </button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function checkAnswer(selectedIndex) {
+    const quiz = currentQuizQuestions[currentQuestion];
+    if (selectedIndex === quiz.correct) {
+        score++;
+    }
+    currentQuestion++;
+    displayQuestion();
+}
+
+function showResults() {
+    const questionArea = document.getElementById('questionArea');
+    const percentage = Math.round((score / currentQuizQuestions.length) * 100);
+    
+    let resultMessage = '';
+    if (percentage === 100) {
+        resultMessage = '¡Perfecto! 🏆 Eres un maestro de los componentes PC';
+    } else if (percentage >= 80) {
+        resultMessage = '¡Excelente! 👍 Conoces muy bien los componentes PC';
+    } else if (percentage >= 60) {
+        resultMessage = 'Buen trabajo. 👌 Sigue aprendiendo sobre componentes PC';
+    } else {
+        resultMessage = 'Necesitas repasar. 📚 Revisa la guía de componentes';
+    }
+
+    questionArea.innerHTML = `
+        <div class="text-center">
+            <h3 class="text-4xl text-blue-300 mb-6">Resultados del Quiz</h3>
+            <p class="text-3xl text-white mb-4">Puntuación: ${score}/${currentQuizQuestions.length}</p>
+            <p class="text-2xl text-gray-300 mb-8">${percentage}% - ${resultMessage}</p>
+            <button onclick="startQuiz()" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl text-2xl">
+                Reintentar Quiz
+            </button>
+        </div>
+    `;
+}
+
+function updateCompatibility() {
+    const cpuSelect = document.getElementById('cpuSelect');
+    const motherboardSelect = document.getElementById('motherboardSelect');
+    const compatibilityResult = document.getElementById('compatibilityResult');
+
+    const selectedCPU = cpuSelect.value;
+    const selectedMotherboard = motherboardSelect.value;
+
+    if (selectedCPU && selectedMotherboard) {
+        const compatibleBoards = compatibilityData[selectedCPU] || [];
+        const isCompatible = compatibleBoards.includes(selectedMotherboard);
+
+        compatibilityResult.innerHTML = isCompatible 
+            ? `<p class="text-green-400">✅ Componentes Compatibles</p>`
+            : `<p class="text-red-400">❌ Componentes No Compatibles</p>`;
+    }
+}
+
+function initCompatibilitySelectors() {
+    const cpuSelect = document.getElementById('cpuSelect');
+    const motherboardSelect = document.getElementById('motherboardSelect');
+
+    Object.keys(compatibilityData).forEach(cpu => {
+        const option = document.createElement('option');
+        option.value = cpu;
+        option.textContent = cpu;
+        cpuSelect.appendChild(option);
+    });
+
+    const allMotherboards = [...new Set(Object.values(compatibilityData).flat())];
+    allMotherboards.forEach(motherboard => {
+        const option = document.createElement('option');
+        option.value = motherboard;
+        option.textContent = motherboard;
+        motherboardSelect.appendChild(option);
+    });
+
+    cpuSelect.addEventListener('change', updateCompatibility);
+    motherboardSelect.addEventListener('change', updateCompatibility);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const startQuizBtn = document.getElementById('startQuizBtn');
+    startQuizBtn.addEventListener('click', startQuiz);
+    initCompatibilitySelectors();
+});
+    </script>
+</body>
+</html>
